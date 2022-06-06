@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    min-height: 100%;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+div.header{
+    height: 940px;   
+    background-image: url('https://cdn.discordapp.com/attachments/902556348808568833/983045214467928084/Foto-Sagrada_copy.png');
+    object-fit: cover;
+    background-position: 50%;
+    background-attachment: scroll;
+    display: block;
+    margin: 0 auto;
+}
+div.title{
+    background-color: rgba(255, 255, 255, 0.4);
+    border-bottom: solid 5px #66CAD8;
+    padding: 10px 0 0;
+}
+div.title h1{
+    font-family: 'Courgette', serif;
+    text-align: center;
+}
+div.text{
+    padding: 20px 10px;
+    margin: 10px 0;
+    float: left;
+    width: 45%;
+}
+img.bottom{
+    margin: 30px 10px;
+    width: 45%;
+    float: left;
+}
+.navbar{
+    height: 70px;
+    position: relative;
+    width: 100%;
+    background-color: #66CAD8;
+    padding: 19px 30px;
+}
+.navbar .nav-header{
+    display: inline;
+}
+.navbar .nav-header .nav-logo{
+    display: inline-block;
+    margin-top: -7px;
+}
+.navbar .nav-links{
+    display: inline;
+    float: right;
+    font-size: 18px;
+}
+.navbar .nav-links a {
+    padding: 10px 12px;
+    text-decoration: none;
+    font-weight: 550;
+    color: white;
+}
+.navbar .nav-links a:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.navbar #check-nav, .navbar .btn-nav{
+    display: none;
+}
+footer{
+    height: 100px;
+    background-color: #66CAD8;
+    padding: 10px;
+    width: 100%;
+    float: left;
+    margin: 10px 0 0;
+}
+footer img{
+    height: 60px;
+    margin-right: 4%;
+}
+footer p{
+   color: white;
+}
+@media (max-width:700px){
+    div.text{
+        width: 100% !important;
+    }
+    img.bottom{
+        width: 100% !important;
+        margin: 0 !important;
+    }
+    .navbar .btn-nav{
+        display: inline-block;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+    .navbar .btn-nav label{
+        display: inline-block;
+        width: 80px;
+        height: 70px;
+        padding: 25px;
+    }
+    .navbar .btn-nav label span {
+        display: block;
+        height: 10px;
+        width: 25px;
+        border-top: 3px solid #eee;
+    }
+    .navbar .btn-nav label:hover, .navbar #check-nav:checked ~ .btn-nav label {
+        background-color: #66CAD8;
+        transition: all 0.5s ease;
+    }
+    .navbar .nav-links{
+      position: absolute;
+      display: block;
+      text-align: center;
+      width: 50%;
+      background-color: #66CAD8;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 70px;
+      right: 0px;
+    }
+    .navbar .nav-links a{
+        display: block;
+    }.navbar #check-nav:not(:checked) ~ .nav-links {
+        height: 0px;
+    }
+    .navbar #check-nav:checked ~ .nav-links {
+        height: calc(100vh - 70px);
+        overflow-y: auto;
+    }
+    .navbar .nav-links .dropdown{
+        float: none;
+        width: 100%;
+    }
+    .navbar .nav-links .drop-content a {
+        color: #FFF;
+    } 
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+.drop-content{
+    display: none;
+    position: absolute;
+    background-color: #66CAD8;
+    min-width: 120px;
+    font-size: 16px;
+    top: 34px;
+    z-index: 1;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+}
+.dropdown:hover .drop-content{
+    display: block;
+}
+.drop-content a {
+    padding: 12px 10px;
+    border-bottom: 1px solid rgb(197, 197, 250);
+    display: block;
+    transition: all 0.5s ease !important;
+}
+  .dropBtn .drop-content a:hover {
+    background-color: rgb(230, 230, 230);
+}
+  .dropdown:hover .dropBtn{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
