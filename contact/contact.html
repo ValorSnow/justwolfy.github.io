@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -15,7 +15,7 @@
     <div class="navbar">
         <div class="nav-header">
             <div class="nav-logo">
-                <img src="IMG/Logo.svg" width="80px" alt="logo">
+                <img src="../IMG/Logo.svg" width="80px" alt="logo">
             </div>
         </div>
         <input type="checkbox" id="check-nav">
@@ -56,23 +56,27 @@
     </div>
     <div class="container">
         <div class="text">
-            <h1>Introductie</h1>
-            <p>Barcelona is de op één na grootste stad van Spanje, net na haar hoofdstad Madird. Het is gelegen in het
-                noorden, in de regio Catalonië. De stad ligt aan de kust, en is een mooie mix van modern en oud, en
-                cultureel is er heel wat te beleven, zoals de alombekende Sagrada Familia. Wij bieden u met de vleugel
-                een prachtige wandeltocht aan die zich vooral focust op Gaudí, maar waar u alsook souveniers kan kopen
-                en de locale keuken testen.
-                <br><br>
-                Via bovenstaande navigatiebalk kunt U de andere delen van onze website verkennen.
-                <br><br>
-                Veel leesplezier</p>
+            <h1>Contact</h1>
+            <form action="../index.html" method="post">
+                <label for="aanspreking">Aanspreking</label><br>
+                <select name="aanspreking" id="aanspreking">
+                    <option value="Menheer">Meneer</option>
+                    <option value="Mevrouw">Mevrouw</option>
+                </select><br>
+                <label for="naam">Uw naam</label><br>
+                <input type="text" name="naam" id="naam" required><br>
+                <label for="email">Uw mail</label><br>
+                <input type="email" name="email" id="email" required><br>
+                <label for="bericht">Uw vraag</label><br>
+                <textarea name="bericht" id="bericht" cols="80" rows="10"></textarea><br>
+                <input type="submit" value="verzenden">
+            </form>
         </div>
-        <img class="bottom" src="IMG/BCN.jpg" alt="Foto parc Güell">
     </div>
 </body>
 <footer>
     <div>
-        <img src="IMG/Logo.svg" alt="Logo De Vleugel">
+        <img src="../IMG/Logo.svg" alt="Logo De Vleugel">
         <p>© De Vleugel 2021-2022</p>
     </div>
 </footer>
